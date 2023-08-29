@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{ url_for('static',filename='assets/img/about-bg.jpg') }}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>About Me</h1>
+                            <span class="subheading">This is what I do.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                       <h1>
+                           Welcome to StellarStories!
+
+                       </h1> 
+                       <p style="text-align:justify;">
+                        
+                        At StellarStories, we're passionate about sharing valuable insights, inspiring stories, and practical advice with our readers. Our goal is to create a platform where you can find compelling content that informs, entertains, and enriches your life.
+                        
+                        We believe that knowledge is power, and we strive to empower our readers with information that can help them make informed decisions, discover new ideas, and explore their passions. Whether you're seeking practical tips for everyday life, in-depth analyses of current trends, or thought-provoking pieces on societal issues, you'll find it all here.
+                        
+                        Our commitment to excellence extends beyond the words on the page. We prioritize engaging and user-friendly design to ensure your reading experience is enjoyable and hassle-free. We value your feedback and encourage you to share your thoughts, suggestions, and questions with us in the comments section of each article.
+                        
+                        Join our vibrant community of readers and be a part of the conversation. Connect with us on social media platforms, sign up for our newsletter to receive regular updates, and never miss an exciting post.
+                        
+                        Thank you for visiting StellarStories. We hope you find inspiration, knowledge, and entertainment within our pages. Happy reading!
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+       
+
+{% endblock %}

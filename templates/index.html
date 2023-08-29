@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpg') }}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>StellarStories</h1>
+                            <span class="subheading">Unleash Your Imagination with StellarStories!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    {% for post in posts %}
+      
+                    <div class="post-preview">
+                        <a href="/post/{{post.slug}}">
+                            <h2 class="post-title">{{ post.title }}</h2>
+                            <!-- <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3> -->
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="">{{ post.username }}</a>
+                            {{ post.date }}
+                        </p>
+                        {{post.content[0:40]}}....
+                    </div>
+                    {% endfor %}
+                   
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

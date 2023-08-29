@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block body %}
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpg') }}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Sign Up</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h2>Crete a Account</h2>
+                <form method="post" action="/signup">
+                    <div class="form-floating">
+                        <input class="form-control"  id="uname" type="text" name="uname" placeholder="Enter Name" data-sb-validations="required" />
+                        <label for="name">User Name</label>
+                    </div>
+                    <div class="form-floating">
+                        <input class="form-control" id="email" type="email" name="email" placeholder="Enter Content" data-sb-validations="required" />
+                        <label for="email">E-Mail</label>
+                    </div>
+                    <div class="form-floating">
+                        <input class="form-control" id="password" type="text" name="pass" placeholder="Enter Slug number" data-sb-validations="required" />
+                        <label for="phone">Password</label>
+                    </div>
+                    <br />
+                    <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Signup</button>
+                    <br />
+                    <!-- <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div> -->
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <!-- <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div> -->
+                    <!-- Submit Button-->
+                </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+</html>
