@@ -5,15 +5,17 @@ from datetime import datetime
 import json
 import os
 import bcrypt
-w
 
 
-with open('config.json', 'r') as c:
+
+with open('/home3/prathmes/stellarstories.mdakbari.live/StellarStories/config.json', 'r') as c:
     params = json.load(c)['params']
 local_server = True
 app = Flask(__name__)
 app.secret_key ="manthan"
 app.config['UPLOAD_FOLDER'] = params['file_upload']
+ 
+
 
 if(local_server):
     app.config["SQLALCHEMY_DATABASE_URI"] = params['local_uri']
@@ -40,7 +42,7 @@ class Posts(db.Model):
     date = db.Column(db.String, nullable=True)
     img_file = db.Column(db.String, nullable=True)
     username = db.Column(db.String, nullable=False)
-    email = db.Column(db.String, nullable=False)
+    # email = db.Column(db.String, nullable=False)
 
 class Signup(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
@@ -127,7 +129,7 @@ def edit(sno):
                 img_file = request.form.get('img_file')
                 date = datetime.now()            
                 if int(sno) == 0:
-                    post = Posts(username=user_from_database.uname, email=user_from_database.email, title=title, content=content, slug=slug, img_file=img_file, date=date)
+                    post = Posts(username=user_from_database.uname, title=title, content=content, slug=slug, img_file=img_file, date=date)
                     db.session.add(post)
                     db.session.commit()
                 else:
@@ -201,5 +203,5 @@ def post():
     return render_template('post.html') 
     
 
-
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run()
