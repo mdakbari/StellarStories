@@ -141,6 +141,7 @@ def edit(sno):
                     post.img_file = img_file
                     post.date = date
                     db.session.commit()
+                return redirect("/dashboard")
 
             post = Posts.query.filter_by(sno=sno, username=user_from_database.uname).first()               
             return render_template("edit.html", params=params, post=post)
