@@ -168,7 +168,7 @@ def post_route(post_slug):
 
 
 #File upload 
-@app.route("/upload", methods=['GET','POST'])
+@app.route("/upload", methods=['POST'])
 def upload():
     if 'user' in session and session['user']:
         uploadfile = Signup.query.filter_by(uname=session['user']).first()
