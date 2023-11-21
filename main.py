@@ -175,6 +175,7 @@ def upload():
         if uploadfile:
             if(request.method == 'POST'):
                 f = request.files['file']
+                os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
                 f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
                 return "Upload Successful"
 
