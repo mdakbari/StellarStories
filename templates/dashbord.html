@@ -45,7 +45,7 @@
                         <tr>
                           <td>{{ loop.index }}</td>
                           <td>{{ post.title }}</td>
-                          <td>{{ post.date }}</td>
+                          <td>{{ post.date.strftime('%d-%m-%Y') }}</td>
                           <td> <a href="/edit/{{ post.sno }}"><button class="btn btn-primary text-uppercase">Edit</button></a></td>
                           <td><a href="/delete/{{ post.sno }}"><button class="btn btn-primary text-uppercase">Delete</button></a></td>
                         </tr>
