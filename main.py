@@ -168,14 +168,13 @@ def post_route(post_slug):
 
 
 #File upload 
-@app.route("/upload", methods=['POST'])
+@app.route("/upload", methods=['GET','POST'])
 def upload():
     if 'user' in session and session['user']:
         uploadfile = Signup.query.filter_by(uname=session['user']).first()
         if uploadfile:
             if(request.method == 'POST'):
                 f = request.files['file']
-                os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
                 f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
                 return "Upload Successful"
 
