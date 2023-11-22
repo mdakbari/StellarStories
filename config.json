@@ -7,6 +7,6 @@
         "no_of_post": 5,
         "admin_name": "manthan",
         "admin_password": "12345678",
-        "file_upload": "stellarstories.mdakbari.live/static/assets/img"
+        "file_upload": "/home3/prathmes/stellarstories.mdakbari.live/static/assets/img"
     }
 }
