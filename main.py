@@ -167,8 +167,8 @@ def post_route(post_slug):
 # show all post for user
 @app.route("/showpost/<string:post_slug>", methods=['GET'])
 def showpost(post_slug):
-    post = Posts.query.filter_by(slug=post_slug).first()    
-    return render_template('user_post.html', params=params, post=post)
+    posts = Posts.query.filter_by(slug=post_slug).first()    
+    return render_template('user_post.html', params=params, posts=posts)
 
 
 
