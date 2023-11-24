@@ -19,17 +19,17 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-            {% for post in posts %}
+            {% for posts in post %}
                 <div class="post-preview">
-                    <a href="/post/{{ post.slug }}">
-                        <h2 class="post-title">{{ post.title }}</h2>
+                    <a href="/post/{{ posts.slug }}">
+                        <h2 class="post-title">{{ posts.title }}</h2>
                     </a>
                     <p class="post-meta">
                         Posted by
-                        <a href="/user/{{ post.sno }}">{{ post.username }}</a>
-                        {{ post.date }}
+                        <a href="/user/{{ posts.sno }}">{{ posts.username }}</a>
+                        {{ posts.date }}
                     </p>
-                    {{ post.content[0:40] }}....
+                    {{ posts.content[0:40] }}....
                 </div>
             {% endfor %}
                    
