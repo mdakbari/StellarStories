@@ -56,10 +56,6 @@ class Signup(db.Model):
          return bcrypt.checkpw(password.encode('utf-8'), self.password)
 
 @app.route("/")
-def home2():
-    posts = Posts.query.all()   
-    return render_template('index.html', posts=posts, params=params)
-
 @app.route("/home")
 def home():
     posts = Posts.query.all()   
