@@ -168,7 +168,7 @@ def post_route(post_slug):
 
 @app.route('/user/<string:username>/posts', methods=['GET'])
 def user_posts(username):
-    user = Signup.query.filter_by(uname=username).first_or_404()
+    user = Signup.query.filter_by(uname=username).all()
     posts = Posts.query.filter_by(username=username).all()
     return render_template('user_post.html', user=user, posts=posts)
 
