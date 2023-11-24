@@ -165,10 +165,12 @@ def post_route(post_slug):
     return render_template('post.html', params=params, post=post) 
 
 # show all post for user
-@app.route("/showpost/<string:post_slug>", methods=['GET'])
-def showpost(post_slug):
-    post = Posts.query.filter_by(slug=post_slug).first()    
-    return render_template('user_post.html', params=params, post=post)
+
+@app.route('/user/<string:username>/posts', methods=['GET'])
+def user_posts(username):
+    user = Signup.query.filter_by(uname=username).first_or_404()
+    posts = Posts.query.filter_by(username=username).all()
+    return render_template('user_post.html', user=user, posts=posts)
 
 
 
