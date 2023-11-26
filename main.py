@@ -68,7 +68,7 @@ def home():
     page = request.args.get('page', 1, type=int)  # Get the page number from the query parameters, default to 1
 
     # Set the number of posts to display per page
-    per_page = 5
+    per_page = 3
 
     # Query only the necessary posts for the current page
     posts = Posts.query.order_by(Posts.date.desc()).paginate(page=page, per_page=per_page, error_out=False)
