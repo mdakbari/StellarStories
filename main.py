@@ -59,7 +59,8 @@ class Signup(db.Model):
 @app.route("/")
 @app.route("/home")
 def home():
-    posts = Posts.query.order_by(Posts.date.desc()).all()
+    post_limit = params['no_of_post'] 
+    posts = Posts.query.order_by(Posts.date.desc()).limit(post_limit).all()
     for i in range(len(posts)):
         # remove extra space from username
         posts[i].username = posts[i].username.strip()
