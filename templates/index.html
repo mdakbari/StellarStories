@@ -20,7 +20,7 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
-                    {% for post in posts  %}
+                    {% for post in posts.items  %}
       
                     <div class="post-preview">
                         <a href="/post/{{post.slug}}">
@@ -39,8 +39,12 @@
                     <hr class="my-4" />
                     <!-- Pager-->
                     <div class="d-flex justify-content-end mb-4"
-                    ><a class="btn btn-primary text-uppercase" href="/posts">Older Posts →</a>
+                    >
+                    {% if posts.has_prev %}
+                    <a class="btn btn-primary text-uppercase" href="?page={{ posts.prev_num }}">Older Posts →</a>
+                    {% endif %}
                     </div>
+                    
 
                    
                 </div>

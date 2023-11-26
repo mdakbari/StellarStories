@@ -59,7 +59,10 @@ class Signup(db.Model):
 @app.route("/")
 @app.route("/home")
 def home():
-    posts = Posts.query.order_by(Posts.date.desc()).all()
+    page = request.args.get('page', 1, type=int)
+    nopost = params['no_of_post']
+    posts = Posts.query.order_by(Posts.date.desc()).paginate(page=page, per_page=nopost)
+    # posts = Posts.query.order_by(Posts.date.desc()).all()
     for i in range(len(posts)):
         # remove extra space from username
         posts[i].username = posts[i].username.strip()
@@ -187,6 +190,9 @@ def user_posts(username):
     return render_template('user_post.html', user=user, posts=posts)
 
 
+@app.route("/older_post" , methods=['GET'])
+def older_post():
+    pass
 
 
 #File upload 
@@ -225,16 +231,6 @@ def contact():
 def post():
     return render_template('post.html') 
 
-#write a code for next prev button for post
-@app.route("/next")
-def next():
-    return render_template('next.html')
-
-@app.route("/prev")
-def prev():
-    return render_template('prev.html')
-
-    
 
 if __name__ == '__main__':
     app.run()
