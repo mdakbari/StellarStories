@@ -89,7 +89,6 @@ def signup():
         if Signup.query.filter_by(email=email).first():
             flash('Email already exists', 'error')
             return render_template('signup.html')
-        
         new_user = Signup(uname=uname,email=email,password=password)    
         # new_user.set_password(password)
         db.session.add(new_user)
@@ -111,6 +110,7 @@ def dashboard():
     if request.method == 'POST':
         uname = request.form.get('uname')
         upassword = request.form.get('pass')
+
         
         user = Signup.query.filter_by(uname=uname, password=upassword).first()
         # password = Signup.query.filter_by(password=upassword).first()
@@ -120,6 +120,9 @@ def dashboard():
             session['user'] = uname
             posts = Posts.query.filter_by(username=user.uname).all()
             return render_template('dashbord.html', posts=posts)
+        else:
+            flash('Invalid Username or Password', 'error')
+            return render_template('login.html')
         # if uname==params['admin_name'] and upassword==params['admin_password']:
         #     session['user'] = uname
         #     posts = Posts.query.all()
