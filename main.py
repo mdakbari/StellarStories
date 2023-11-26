@@ -59,7 +59,7 @@ class Signup(db.Model):
 @app.route("/")
 @app.route("/home")
 def home():
-    posts = Posts.query.all()  
+    posts = Posts.query.order_by(Posts.date.desc())
     for i in range(len(posts)):
         # remove extra space from username
         posts[i].username = posts[i].username.strip()
@@ -110,8 +110,6 @@ def dashboard():
     if request.method == 'POST':
         uname = request.form.get('uname')
         upassword = request.form.get('pass')
-
-        
         user = Signup.query.filter_by(uname=uname, password=upassword).first()
         # password = Signup.query.filter_by(password=upassword).first()
 
@@ -226,6 +224,16 @@ def contact():
 @app.route("/post")
 def post():
     return render_template('post.html') 
+
+#write a code for next prev button for post
+@app.route("/next")
+def next():
+    return render_template('next.html')
+
+@app.route("/prev")
+def prev():
+    return render_template('prev.html')
+
     
 
 if __name__ == '__main__':
