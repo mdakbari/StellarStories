@@ -71,11 +71,13 @@ def home():
     per_page = 5
 
     # Query only the necessary posts for the current page
-    posts = Posts.query.order_by(Posts.date.desc()).paginate(page, per_page, error_out=False)
+    posts = Posts.query.order_by(Posts.date.desc()).paginate(page=page, per_page=per_page, error_out=False)
 
     for i in range(len(posts.items)):
         # remove extra space from username
         posts.items[i].username = posts.items[i].username.strip()
+
+    return render_template('index.html', posts=posts, params=params)
 
 
 # About 
