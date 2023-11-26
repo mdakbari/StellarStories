@@ -61,10 +61,8 @@ class Signup(db.Model):
 def home():
     posts = Posts.query.all()  
     for i in range(len(posts)):
-        a = posts[i].username
-        b = " ".join(a.split())
-        posts[i].username = b.strip()
-        # posts[i].username = posts[i].username.strip()
+        # remove extra space from username
+        posts[i].username = posts[i].username.strip()
     return render_template('index.html', posts=posts, params=params)
 
 # About 
@@ -79,6 +77,19 @@ def signup():
         uname = request.form.get('uname')
         email = request.form.get('email')
         password = request.form.get('pass')
+        if ' ' in uname:
+            flash('Username cannot contain spaces', 'error')
+            return render_template('signup.html')
+        if len(password) < 8:
+            flash('Password must be at least 8 characters', 'error')
+            return render_template('signup.html')
+        if Signup.query.filter_by(uname=uname).first():
+            flash('Username already exists', 'error')
+            return render_template('signup.html')
+        if Signup.query.filter_by(email=email).first():
+            flash('Email already exists', 'error')
+            return render_template('signup.html')
+        
         new_user = Signup(uname=uname,email=email,password=password)    
         # new_user.set_password(password)
         db.session.add(new_user)
