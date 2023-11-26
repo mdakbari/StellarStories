@@ -59,12 +59,24 @@ class Signup(db.Model):
 @app.route("/")
 @app.route("/home")
 def home():
-    post_limit = params['no_of_post'] 
-    posts = Posts.query.order_by(Posts.date.desc()).limit(post_limit).all()
-    for i in range(len(posts)):
+    # post_limit = params['no_of_post'] 
+    # posts = Posts.query.order_by(Posts.date.desc()).limit(post_limit).all()
+    # for i in range(len(posts)):
+    #     # remove extra space from username
+    #     posts[i].username = posts[i].username.strip()
+    # return render_template('index.html', posts=posts, params=params)
+    page = request.args.get('page', 1, type=int)  # Get the page number from the query parameters, default to 1
+
+    # Set the number of posts to display per page
+    per_page = 5
+
+    # Query only the necessary posts for the current page
+    posts = Posts.query.order_by(Posts.date.desc()).paginate(page, per_page, error_out=False)
+
+    for i in range(len(posts.items)):
         # remove extra space from username
-        posts[i].username = posts[i].username.strip()
-    return render_template('index.html', posts=posts, params=params)
+        posts.items[i].username = posts.items[i].username.strip()
+
 
 # About 
 @app.route("/about")

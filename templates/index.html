@@ -38,8 +38,18 @@
                     <!-- Divider-->
                     <hr class="my-4" />
                     <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"
+                    <!-- <div class="d-flex justify-content-end mb-4"
                     ><a class="btn btn-primary text-uppercase" href="/older">Older Posts →</a>
+                    </div>
+                     -->
+                     <div class="d-flex justify-content-between mb-4">
+                        {% if posts.has_prev %}
+                            <a class="btn btn-primary text-uppercase" href="{{ url_for('home', page=posts.prev_num) }}">Newer Posts ←</a>
+                        {% endif %}
+                        
+                        {% if posts.has_next %}
+                            <a class="btn btn-primary text-uppercase" href="{{ url_for('home', page=posts.next_num) }}">Older Posts →</a>
+                        {% endif %}
                     </div>
                     
 
