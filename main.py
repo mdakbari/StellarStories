@@ -61,7 +61,10 @@ class Signup(db.Model):
 def home():
     posts = Posts.query.all()  
     for i in range(len(posts)):
-        posts[i].username = posts[i].username.strip()
+        a = posts[i].username
+        b = " ".join(a.split())
+        posts[i].username = b.strip()
+        # posts[i].username = posts[i].username.strip()
     return render_template('index.html', posts=posts, params=params)
 
 # About 
