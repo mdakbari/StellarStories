@@ -59,13 +59,10 @@ class Signup(db.Model):
 @app.route("/")
 @app.route("/home")
 def home():
-    page = request.args.get('page', 1, type=int)
-    nopost = params['no_of_post']
-    posts = Posts.query.order_by(Posts.date.desc()).paginate(page=page, per_page=nopost)
-    # posts = Posts.query.order_by(Posts.date.desc()).all()
-    for post in posts.items:
+    posts = Posts.query.order_by(Posts.date.desc()).all()
+    for i in range(len(posts)):
         # remove extra space from username
-        post.username = post.username.strip()
+        posts[i].username = posts[i].username.strip()
     return render_template('index.html', posts=posts, params=params)
 
 # About 
