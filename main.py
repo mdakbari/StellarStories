@@ -63,7 +63,7 @@ def home():
     nopost = params['no_of_post']
     posts = Posts.query.order_by(Posts.date.desc()).paginate(page=page, per_page=nopost)
     # posts = Posts.query.order_by(Posts.date.desc()).all()
-    for i in posts.items:
+    for post in posts.items:
         # remove extra space from username
         post.username = post.username.strip()
     return render_template('index.html', posts=posts, params=params)
