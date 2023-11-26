@@ -65,7 +65,7 @@ def home():
     # posts = Posts.query.order_by(Posts.date.desc()).all()
     for i in posts.items:
         # remove extra space from username
-        posts[i].username = posts[i].username.strip()
+        post.username = post.username.strip()
     return render_template('index.html', posts=posts, params=params)
 
 # About 
