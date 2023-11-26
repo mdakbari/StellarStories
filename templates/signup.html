@@ -1,5 +1,20 @@
 {% extends "layout.html" %}
 {% block body %}
+
+<style>
+    ul.flashes li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f8d7da; /* Light red background color for error messages */
+    color: #721c24; /* Dark red text color for error messages */
+}
+
+ul.flashes li.success {
+    background-color: #d4edda; /* Light green background color for success messages */
+    color: #155724; /* Dark green text color for success messages */
+}
+</style>
 <header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpg') }}')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -12,18 +27,20 @@
         </div>
     </div>
 </header>
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class="flashes">
-      {% for message in messages %}
-        <li>{{ message }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
+
 <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
             <h2>Crete a Account</h2>
                 <form method="post" action="/signup">
                     <div class="form-floating">
