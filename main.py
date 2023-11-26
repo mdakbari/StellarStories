@@ -58,7 +58,9 @@ class Signup(db.Model):
 @app.route("/")
 @app.route("/home")
 def home():
-    posts = Posts.query.all()   
+    posts = Posts.query.all()  
+    for i in range(len(posts)):
+        posts[i].username = posts[i].username.strip()
     return render_template('index.html', posts=posts, params=params)
 
 # About 
@@ -73,7 +75,7 @@ def signup():
         uname = request.form.get('uname')
         email = request.form.get('email')
         password = request.form.get('pass')
-        new_user = Signup(uname=uname,email=email,password=password)
+        new_user = Signup(uname=uname,email=email,password=password)    
         # new_user.set_password(password)
         db.session.add(new_user)
         db.session.commit()
