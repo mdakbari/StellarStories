@@ -65,16 +65,12 @@ def home():
     #     # remove extra space from username
     #     posts[i].username = posts[i].username.strip()
     # return render_template('index.html', posts=posts, params=params)
-    page = request.args.get('page', 1, type=int)  # Get the page number from the query parameters, default to 1
-
-    # Set the number of posts to display per page
+    page = request.args.get('page', 1, type=int)  
     per_page = 3
 
-    # Query only the necessary posts for the current page
     posts = Posts.query.order_by(Posts.date.desc()).paginate(page=page, per_page=per_page, error_out=False)
 
     for i in range(len(posts.items)):
-        # remove extra space from username
         posts.items[i].username = posts.items[i].username.strip()
 
     return render_template('index.html', posts=posts, params=params)
@@ -143,6 +139,11 @@ def dashboard():
 
     return render_template('login.html')    
 
+
+@app.route("/allpost")
+def all_post():
+    post = Posts.query.all()
+    return render_template('all_post.html', post=post)
 
 # Edit Btn   
 @app.route("/edit/<string:sno>", methods=['GET','POST'])
