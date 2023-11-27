@@ -67,7 +67,6 @@ def home():
     # return render_template('index.html', posts=posts, params=params)
     page = request.args.get('page', 1, type=int)  
     per_page = 3
-
     posts = Posts.query.order_by(Posts.date.desc()).paginate(page=page, per_page=per_page, error_out=False)
 
     for i in range(len(posts.items)):
