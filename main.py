@@ -142,7 +142,7 @@ def dashboard():
 
 @app.route("/allpost")
 def all_post():
-    post = Posts.query.all()
+    post = Posts.query.order_by(Posts.date.desc()).all()
     return render_template('all_post.html', post=post)
 
 #delete post from 
