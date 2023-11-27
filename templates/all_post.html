@@ -24,10 +24,12 @@
                       <thead>
                         <tr>
                           <th>Sr.No</th>
+                          <th>Username</th>
                           <th>Title</th>
+                          <th>File Name</th>
+                          <th>Content</th>
+                          <th>Slug</th>
                           <th>Date</th>
-                          <th>Edit</th>
-                          <th>Delete</th>
                         </tr>
                       </thead>
 
@@ -36,7 +38,7 @@
                         <tr>
                           <td>{{ loop.index }}</td>
                           <td>{{ posts.username }}</td>
-                          <td>{{ posts.title}}</td>
+                          <td>{{ posts.title[0:10]}}</td>
                           <td>{{ posts.img_file}}</td>
                           <td>{{ posts.content[0:20]}}</td>
                           <td>{{ posts.slug}}</td>
