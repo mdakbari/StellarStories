@@ -145,6 +145,14 @@ def all_post():
     post = Posts.query.all()
     return render_template('all_post.html', post=post)
 
+#delete post from 
+@app.route("/deletepost/<string:sno>", methods=['GET','POST'])
+def deletepost(sno):
+    post = Posts.query.filter_by(sno=sno).first()
+    db.session.delete(post)
+    db.session.commit()
+    return redirect("/allpost")
+
 # Edit Btn   
 @app.route("/edit/<string:sno>", methods=['GET','POST'])
 def edit(sno):
