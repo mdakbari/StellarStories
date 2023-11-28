@@ -59,12 +59,6 @@ class Signup(db.Model):
 @app.route("/")
 @app.route("/home")
 def home():
-    # post_limit = params['no_of_post'] 
-    # posts = Posts.query.order_by(Posts.date.desc()).limit(post_limit).all()
-    # for i in range(len(posts)):
-    #     # remove extra space from username
-    #     posts[i].username = posts[i].username.strip()
-    # return render_template('index.html', posts=posts, params=params)
     page = request.args.get('page', 1, type=int)  
     per_page = 3
     posts = Posts.query.order_by(Posts.date.desc()).paginate(page=page, per_page=per_page, error_out=False)
@@ -141,8 +135,10 @@ def dashboard():
 
 @app.route("/allpost")
 def all_post():
+    
     post = Posts.query.order_by(Posts.date.desc()).all()
-    return render_template('all_post.html', post=post)
+    user = Posts.query.filter_by(username=session['user']).first()
+    return render_template('all_post.html', post=post, user=user)
 
 #delete post from 
 @app.route("/deletepost/<string:sno>", methods=['GET','POST'])
