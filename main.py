@@ -135,10 +135,8 @@ def dashboard():
 
 @app.route("/allpost")
 def all_post():
-    
     post = Posts.query.order_by(Posts.date.desc()).all()
-    user = Posts.query.filter_by(username=session['user']).first()
-    return render_template('all_post.html', post=post, user=user)
+    return render_template('all_post.html', post=post)
 
 #delete post from 
 @app.route("/deletepost/<string:sno>", methods=['GET','POST'])
