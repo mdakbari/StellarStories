@@ -192,7 +192,11 @@ def delete(sno):
 # Show Post
 @app.route("/post/<string:post_slug>", methods=['GET'])
 def post_route(post_slug):
-    post = Posts.query.filter_by(slug=post_slug).first()    
+    post = Posts.query.filter_by(slug=post_slug).first()  
+    post_date = datetime.strptime(post.date, '%d-%m-%Y')
+    days_ago = (datetime.now() - post_date).days
+    post.days_ago = f"{days_ago} {'day' if days_ago == 1 else 'days'} ago"
+  
     return render_template('post.html', params=params, post=post) 
 
 # show all post for user
