@@ -66,9 +66,14 @@ def home():
     days_ago = (datetime.now() - posts.date).days
     post.days_ago = f"{days_ago} {'day' if days_ago == 1 else 'days'} ago"
   
+    for post in posts.items:
+        days_ago = (datetime.now() - post.date).days
+        post.days_ago = f"{days_ago} {'day' if days_ago == 1 else 'days'} ago"
+        post.username = post.username.strip()
 
-    for i in range(len(posts.items)):
-        posts.items[i].username = posts.items[i].username.strip()
+
+    # for i in range(len(posts.items)):
+    #     posts.items[i].username = posts.items[i].username.strip()
 
     return render_template('index.html', posts=posts, params=params)
 
