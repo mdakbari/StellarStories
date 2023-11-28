@@ -212,7 +212,12 @@ def post_route(post_slug):
 @app.route('/user/<string:username>/posts', methods=['GET'])
 def user_posts(username):
     user = Signup.query.filter_by(uname=username).first_or_404()
-    posts = Posts.query.filter_by(username=username).all()
+    posts = Posts.query.filter_by(username=username).all()\
+
+    for post in posts:
+        days_ago = (datetime.now() - post.date).days
+        post.days_ago = f"{days_ago} {'day' if days_ago == 1 else 'days'} ago"
+  
     return render_template('user_post.html', user=user, posts=posts)
 
 
