@@ -63,6 +63,9 @@ def home():
     per_page = 3
     posts = Posts.query.order_by(Posts.date.desc()).paginate(page=page, per_page=per_page, error_out=False)
 
+    days_ago = (datetime.now() - posts.date).days
+    posts.days_ago = f"{days_ago} {'day' if days_ago == 1 else 'days'} ago"
+
     for i in range(len(posts.items)):
         posts.items[i].username = posts.items[i].username.strip()
 
