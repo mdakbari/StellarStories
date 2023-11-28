@@ -22,9 +22,13 @@
                 <div class="post-preview">
                     
                     <a href="/post/{{post.slug}}">
-                        <h2 class="post-title">{{ post.title }}</h2>
-                        {{ post.days_ago }}
-                    </a>    
+                        <h2 class="post-title">{{ post.title }}
+                            <h5 class="post-subtitle">{{ post.days_ago }}</h5>
+                        </h2>
+                        
+                    </a>
+                    
+                    
                     <!-- <p class="post-meta">
                         Posted by
                         <a href="/user/{{ posts.sno }}">{{ posts.username }}</a>
