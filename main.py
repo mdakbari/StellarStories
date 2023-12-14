@@ -8,19 +8,25 @@ import bcrypt
 
 
 
-with open('/home3/prathmes/stellarstories.mdakbari.live/StellarStories/config.json', 'r') as c:
-# with open('config.json', 'r') as c:
+# with open('/home3/prathmes/stellarstories.mdakbari.live/StellarStories/config.json', 'r') as c:
+with open('config.json', 'r') as c:
     params = json.load(c)['params']
-local_server = True
+local_server = False
 app = Flask(__name__)
 app.secret_key ="manthan"
-app.config['UPLOAD_FOLDER'] = params['file_upload']
+
+
+
  
 
 
 if(local_server):
+
     app.config["SQLALCHEMY_DATABASE_URI"] = params['local_uri']
+    app.config['UPLOAD_FOLDER'] = params['file_upload2']
+
 else:
+    app.config['UPLOAD_FOLDER'] = params['file_upload']
     app.config["SQLALCHEMY_DATABASE_URI"] = params['prod_uri']
 
 

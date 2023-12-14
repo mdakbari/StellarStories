@@ -2,11 +2,12 @@
     "params":
     {
         "local_server" : "True",
-        "local_uri": "mysql://prathmes_stellarstories:d$RQB}lphTDL@localhost/prathmes_stellarstories",
+        "local_uri": "mysql://root:@localhost/prathmes_stellarstories",
         "prod_uri": "mysql://prathmes_stellarstories:d$RQB}lphTDL@localhost/prathmes_stellarstories",
         "no_of_post": 5,
         "admin_name": "manthan",
         "admin_password": "12345678",
-        "file_upload": "/home3/prathmes/stellarstories.mdakbari.live/static/assets/img"
+        "file_upload": "/home3/prathmes/stellarstories.mdakbari.live/static/assets/img",
+        "file_upload2": "E:\\StellarStories\\static\\assets\\img"
     }
 }
