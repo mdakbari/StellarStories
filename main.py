@@ -5,7 +5,7 @@ from datetime import datetime
 import json
 import os
 import bcrypt
-
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 with open('/home3/prathmes/stellarstories.mdakbari.live/StellarStories/config.json', 'r') as c:
@@ -55,7 +55,7 @@ class Signup(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
     uname = db.Column(db.String, nullable=False)
     email = db.Column(db.String, nullable=False)
-    password = db.Column(db.String(120), nullable=False)
+    password = db.Column(db.String(128), nullable=False)
     def set_password(self, password):
         self.password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
 
@@ -96,6 +96,8 @@ def signup():
         uname = request.form.get('uname')
         email = request.form.get('email')
         password = request.form.get('pass')
+
+
         if ' ' in uname:
             flash('Username cannot contain spaces', 'error')
             return render_template('signup.html')
@@ -108,7 +110,8 @@ def signup():
         if Signup.query.filter_by(email=email).first():
             flash('Email already exists', 'error')
             return render_template('signup.html')
-        new_user = Signup(uname=uname,email=email,password=password)    
+        hasshed_password = generate_password_hash(password, method='scrypt')
+        new_user = Signup(uname=uname,email=email,password=hasshed_password)    
         # new_user.set_password(password)
         db.session.add(new_user)
         db.session.commit()
@@ -129,11 +132,12 @@ def dashboard():
     if request.method == 'POST':
         uname = request.form.get('uname')
         upassword = request.form.get('pass')
-        user = Signup.query.filter_by(uname=uname, password=upassword).first()
+
+        user = Signup.query.filter_by(uname=uname).first()
         # password = Signup.query.filter_by(password=upassword).first()
 
     
-        if user:
+        if user and check_password_hash(user.password, upassword):
             session['user'] = uname
             posts = Posts.query.filter_by(username=user.uname).all()
             return render_template('dashbord.html', posts=posts)
