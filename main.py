@@ -11,7 +11,7 @@ import bcrypt
 # with open('/home3/prathmes/stellarstories.mdakbari.live/StellarStories/config.json', 'r') as c:
 with open('config.json', 'r') as c:
     params = json.load(c)['params']
-local_server = False
+local_server = True
 app = Flask(__name__)
 app.secret_key ="manthan"
 
@@ -172,10 +172,18 @@ def edit(sno):
                 # username = request.form.get('username')
                 content = request.form.get('content')
                 slug = request.form.get('slug')
-                img_file = request.form.get('img_file')
+                # img_file = request.form.get('img_file')
+                img_file = request.files['img_file']
                 date = datetime.now()            
+
+                if img_file:
+                    filename = secure_filename(img_file.filename)
+                    img_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+
                 if int(sno) == 0:
-                    post = Posts(username=user_from_database.uname, title=title, content=content, slug=slug, img_file=img_file, date=date)
+        
+                    post = Posts(username=user_from_database.uname, title=title, content=content, slug=slug, img_file=filename, date=date)
                     db.session.add(post)
                     db.session.commit()
                 else:
@@ -184,7 +192,8 @@ def edit(sno):
                     post.title = title
                     post.content = content
                     post.slug = slug
-                    post.img_file = img_file
+                    if img_file:
+                        post.img_file = filename
                     post.date = date
                     db.session.commit()
                 return redirect("/dashboard")
@@ -270,4 +279,5 @@ def post():
 
 
 if __name__ == '__main__':
+    app.debug = True
     app.run()
