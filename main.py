@@ -8,10 +8,10 @@ import bcrypt
 
 
 
-# with open('/home3/prathmes/stellarstories.mdakbari.live/StellarStories/config.json', 'r') as c:
-with open('config.json', 'r') as c:
+with open('/home3/prathmes/stellarstories.mdakbari.live/StellarStories/config.json', 'r') as c:
+# with open('config.json', 'r') as c:
     params = json.load(c)['params']
-local_server = True
+local_server = False
 app = Flask(__name__)
 app.secret_key ="manthan"
 
