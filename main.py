@@ -11,7 +11,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 with open('/home3/prathmes/stellarstories.mdakbari.live/StellarStories/config.json', 'r') as c:
 # with open('config.json', 'r') as c:
     params = json.load(c)['params']
-local_server = True
+local_server = False
 app = Flask(__name__)
 app.secret_key ="manthan"
 
@@ -291,5 +291,5 @@ def post():
 
 
 if __name__ == '__main__':
-    app.debug = True
+    # app.debug = True
     app.run()
