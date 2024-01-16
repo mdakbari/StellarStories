@@ -11,7 +11,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 with open('/home3/prathmes/stellarstories.mdakbari.live/StellarStories/config.json', 'r') as c:
 # with open('config.json', 'r') as c:
     params = json.load(c)['params']
-local_server = False
+local_server = True
 app = Flask(__name__)
 app.secret_key ="manthan"
 
@@ -111,7 +111,7 @@ def signup():
         if Signup.query.filter_by(email=email).first():
             flash('Email already exists', 'error')
             return render_template('signup.html')
-        hasshed_password = generate_password_hash(password, method='scrypt')
+        hasshed_password = generate_password_hash(password, method='sha256')
         new_user = Signup(uname=uname,email=email,password=hasshed_password)    
         # new_user.set_password(password)
         db.session.add(new_user)
@@ -291,5 +291,5 @@ def post():
 
 
 if __name__ == '__main__':
-    # app.debug = True
+    app.debug = True
     app.run()
