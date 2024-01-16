@@ -1383,3 +1383,1657 @@ Traceback (most recent call last):
   File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/orm/decl_base.py", line 2142, in _declarative_constructor
     raise TypeError(
 TypeError: 'email' is an invalid keyword argument for Posts
+[2023-11-16 14:09:55,674] ERROR in app: Exception on /post/about [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 166, in post_route
+    return render_template('post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 7, in block 'body'
+    {% set fname='assets/img/'+ post.img_file %}
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'img_file'
+[2023-11-16 14:09:57,328] ERROR in app: Exception on /post/contact [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 166, in post_route
+    return render_template('post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 7, in block 'body'
+    {% set fname='assets/img/'+ post.img_file %}
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'img_file'
+[2023-11-16 14:09:59,003] ERROR in app: Exception on /post/dashboard [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 166, in post_route
+    return render_template('post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 7, in block 'body'
+    {% set fname='assets/img/'+ post.img_file %}
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'img_file'
+[2023-11-16 14:10:00,703] ERROR in app: Exception on /post/home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 166, in post_route
+    return render_template('post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 7, in block 'body'
+    {% set fname='assets/img/'+ post.img_file %}
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'img_file'
+[2023-11-19 19:04:56,437] ERROR in app: Exception on /post/about [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 166, in post_route
+    return render_template('post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 7, in block 'body'
+    {% set fname='assets/img/'+ post.img_file %}
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'img_file'
+[2023-11-19 19:04:59,034] ERROR in app: Exception on /post/contact [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 166, in post_route
+    return render_template('post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 7, in block 'body'
+    {% set fname='assets/img/'+ post.img_file %}
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'img_file'
+[2023-11-19 19:05:01,665] ERROR in app: Exception on /post/dashboard [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 166, in post_route
+    return render_template('post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 7, in block 'body'
+    {% set fname='assets/img/'+ post.img_file %}
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'img_file'
+[2023-11-19 19:05:04,151] ERROR in app: Exception on /post/home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 166, in post_route
+    return render_template('post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 7, in block 'body'
+    {% set fname='assets/img/'+ post.img_file %}
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'img_file'
+[2023-11-20 22:44:56,413] ERROR in app: Exception on /post/dashboard [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 166, in post_route
+    return render_template('post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 7, in block 'body'
+    {% set fname='assets/img/'+ post.img_file %}
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'img_file'
+[2023-11-20 22:45:31,285] ERROR in app: Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 177, in upload
+    f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: 'stellarstories.mdakbari.live/static/assets/img/Rectangle.jpg'
+[2023-11-20 22:58:57,824] ERROR in app: Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 177, in upload
+    f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: 'stellarstories.mdakbari.live/static/assets/img/Rectangle.jpg'
+[2023-11-21 21:43:59,043] ERROR in app: Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 178, in upload
+    f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: 'stellarstories.mdakbari.live/static/assets/img/img_1.jpg'
+[2023-11-21 21:48:21,639] ERROR in app: Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 178, in upload
+    f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: 'stellarstories.mdakbari.live/static/assets/img/img_1.jpg'
+[2023-11-21 21:58:39,648] ERROR in app: Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 178, in upload
+    os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+  File "/opt/alt/python38/lib64/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/opt/alt/python38/lib64/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/opt/alt/python38/lib64/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 3 more times]
+  File "/opt/alt/python38/lib64/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/absolute'
+[2023-11-21 22:01:38,437] ERROR in app: Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 178, in upload
+    f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: 'stellarstories.mdakbari.live/static/assets/img/img_2.jpg'
+[2023-11-22 13:23:36,767] ERROR in app: Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 178, in upload
+    f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: 'stellarstories.mdakbari.live/static/assets/img/WIN_20230830_20_32_52_Pro.jpg'
+[2023-11-22 18:03:04,741] ERROR in app: Exception on /post/home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 167, in post_route
+    return render_template('post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/post.html", line 7, in block 'body'
+    {% set fname='assets/img/'+ post.img_file %}
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'img_file'
+[2023-11-22 18:09:23,820] ERROR in app: Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 178, in upload
+    f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+IsADirectoryError: [Errno 21] Is a directory: '/home3/prathmes/stellarstories.mdakbari.live/static/assets/img/'
+[2023-11-22 18:09:28,431] ERROR in app: Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 178, in upload
+    f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+IsADirectoryError: [Errno 21] Is a directory: '/home3/prathmes/stellarstories.mdakbari.live/static/assets/img/'
+[2023-11-24 17:18:52,399] ERROR in app: Exception on /showpost/nineth_slug [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 171, in showpost
+    return render_template('user_post.html', params=params, posts=posts)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 22, in block 'body'
+    {% for post in posts %}
+TypeError: 'Posts' object is not iterable
+[2023-11-24 17:19:00,016] ERROR in app: Exception on /showpost/nineth_slug [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 171, in showpost
+    return render_template('user_post.html', params=params, posts=posts)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 22, in block 'body'
+    {% for post in posts %}
+TypeError: 'Posts' object is not iterable
+[2023-11-24 17:21:11,706] ERROR in app: Exception on /showpost/11_slug [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 171, in showpost
+    return render_template('user_post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 22, in block 'body'
+    {% for posts in post %}
+TypeError: 'Posts' object is not iterable
+[2023-11-24 17:55:15,980] ERROR in app: Exception on /showpost/11_slug [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 171, in showpost
+    return render_template('user_post.html', params=params, post=post)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 22, in block 'body'
+    {% for posts in post %}
+TypeError: 'Posts' object is not iterable
+[2023-11-25 22:36:44,744] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-25 22:36:45,104] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-25 22:36:48,701] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-25 22:36:52,714] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-25 22:40:31,617] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-25 22:53:32,988] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-25 23:09:55,371] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-25 23:40:35,112] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-25 23:58:51,854] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 01:23:10,414] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 02:13:45,229] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 03:56:44,705] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 05:17:21,934] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 05:51:30,021] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 06:29:19,717] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 07:50:20,102] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 09:07:44,873] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 09:07:44,873] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 09:53:46,398] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 11:36:55,219] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 11:36:55,463] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 62, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 32, in template
+    <a href="/user/{{ post.username|striptags|strip }}/posts">{{ post.username }}</a>
+jinja2.exceptions.TemplateAssertionError: No filter named 'strip'.
+[2023-11-26 12:07:26,585] ERROR in app: Exception on /user/dhoni/posts [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/base.py", line 3292, in raw_connection
+    return self.pool.connect()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 452, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 1269, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 716, in checkout
+    rec = pool._do_get()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/impl.py", line 170, in _do_get
+    self._dec_overflow()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/impl.py", line 167, in _do_get
+    return self._create_connection()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 393, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 678, in __init__
+    self.__connect()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 903, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 898, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/create.py", line 637, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 170, in user_posts
+    user = Signup.query.filter_by(uname=username).first_or_404()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask_sqlalchemy/query.py", line 43, in first_or_404
+    rv = self.first()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/orm/query.py", line 2748, in first
+    return self.limit(1)._iter().first()  # type: ignore
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/orm/query.py", line 2847, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/orm/session.py", line 2308, in execute
+    return self._execute_internal(
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/orm/session.py", line 2180, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/orm/session.py", line 2047, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/orm/session.py", line 1143, in _connection_for_bind
+    conn = bind.connect()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/base.py", line 3268, in connect
+    return self._connection_cls(self)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/base.py", line 2430, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/base.py", line 3292, in raw_connection
+    return self.pool.connect()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 452, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 1269, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 716, in checkout
+    rec = pool._do_get()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/impl.py", line 170, in _do_get
+    self._dec_overflow()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/impl.py", line 167, in _do_get
+    return self._create_connection()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 393, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 678, in __init__
+    self.__connect()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 903, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/pool/base.py", line 898, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/create.py", line 637, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/sqlalchemy/engine/default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib64/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2023-11-26 18:07:49,733] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 63, in home
+    for i in range(len(posts)):
+TypeError: object of type 'Query' has no len()
+[2023-11-26 18:28:35,603] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 23, in template
+    {% for post in posts|  %}
+jinja2.exceptions.TemplateSyntaxError: expected token 'name', got 'end of statement block'
+[2023-11-26 18:28:36,978] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    return render_template('index.html', posts=posts, params=params)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/index.html", line 23, in template
+    {% for post in posts|  %}
+jinja2.exceptions.TemplateSyntaxError: expected token 'name', got 'end of statement block'
+[2023-11-26 18:59:53,667] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    for i in range(len(posts)):
+TypeError: object of type 'QueryPagination' has no len()
+[2023-11-26 19:03:52,619] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 68, in home
+    posts[i].username = posts[i].username.strip()
+TypeError: 'QueryPagination' object is not subscriptable
+[2023-11-26 19:04:59,880] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 68, in home
+    post.username = post.username.strip()
+AttributeError: 'function' object has no attribute 'username'
+[2023-11-26 21:23:30,186] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 74, in home
+    posts = Posts.query.order_by(Posts.date.desc()).paginate(page, per_page, error_out=False)
+TypeError: paginate() takes 1 positional argument but 3 positional arguments (and 1 keyword-only argument) were given
+[2023-11-26 21:23:31,778] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 74, in home
+    posts = Posts.query.order_by(Posts.date.desc()).paginate(page, per_page, error_out=False)
+TypeError: paginate() takes 1 positional argument but 3 positional arguments (and 1 keyword-only argument) were given
+[2023-11-26 21:23:33,110] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 74, in home
+    posts = Posts.query.order_by(Posts.date.desc()).paginate(page, per_page, error_out=False)
+TypeError: paginate() takes 1 positional argument but 3 positional arguments (and 1 keyword-only argument) were given
+[2023-11-27 18:56:05,579] ERROR in app: Exception on /user/virat/posts [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 210, in user_posts
+    return render_template('user_post.html', user=user, posts=posts)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 10, in block 'body'
+    <h1>{{ posts.user.username}}</h1>
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'user'
+[2023-11-27 19:00:40,574] ERROR in app: Exception on /user/virat/posts [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 210, in user_posts
+    return render_template('user_post.html', user=user, posts=posts)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/layout.html", line 38, in top-level template code
+    {% block body %} {% endblock %}
+  File "/home3/prathmes/stellarstories.mdakbari.live/StellarStories/templates/user_post.html", line 10, in block 'body'
+    <h1>{{ posts.user.username}}</h1>
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'user'
+[2023-11-28 14:01:38,650] ERROR in app: Exception on /post/1_slug [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 196, in post_route
+    post_date = datetime.strptime(post.date, '%d-%m-%Y')
+TypeError: strptime() argument 1 must be str, not datetime.datetime
+[2023-11-28 14:01:53,558] ERROR in app: Exception on /post/1_slug [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 196, in post_route
+    post_date = datetime.strptime(post.date, '%d-%m-%Y')
+TypeError: strptime() argument 1 must be str, not datetime.datetime
+[2023-11-28 14:09:39,121] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    days_ago = (datetime.now() - posts.date).days
+AttributeError: 'QueryPagination' object has no attribute 'date'
+[2023-11-28 14:35:17,120] ERROR in app: Exception on /post/nineth_slug [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 198, in post_route
+    days_ago = (datetime.now() - post.date).days
+AttributeError: 'NoneType' object has no attribute 'date'
+[2023-11-28 20:50:53,718] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    days_ago = (datetime.now() - posts.date).days
+AttributeError: 'QueryPagination' object has no attribute 'date'
+[2023-11-28 20:53:36,724] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    days_ago = (datetime.now() - posts.date).days
+AttributeError: 'QueryPagination' object has no attribute 'date'
+[2023-11-28 20:54:03,911] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    days_ago = (datetime.now() - posts.date).days
+AttributeError: 'QueryPagination' object has no attribute 'date'
+[2023-11-28 20:54:09,437] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    days_ago = (datetime.now() - posts.date).days
+AttributeError: 'QueryPagination' object has no attribute 'date'
+[2023-11-28 20:54:09,439] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    days_ago = (datetime.now() - posts.date).days
+AttributeError: 'QueryPagination' object has no attribute 'date'
+[2023-11-28 20:54:09,771] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    days_ago = (datetime.now() - posts.date).days
+AttributeError: 'QueryPagination' object has no attribute 'date'
+[2023-11-28 20:54:11,545] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    days_ago = (datetime.now() - posts.date).days
+AttributeError: 'QueryPagination' object has no attribute 'date'
+[2023-11-28 20:54:16,843] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    days_ago = (datetime.now() - posts.date).days
+AttributeError: 'QueryPagination' object has no attribute 'date'
+[2023-11-28 20:54:17,521] ERROR in app: Exception on /home [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 66, in home
+    days_ago = (datetime.now() - posts.date).days
+AttributeError: 'QueryPagination' object has no attribute 'date'
+[2023-11-29 01:33:06,106] ERROR in app: Exception on /post/Exploring-crete-history-n [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 205, in post_route
+    days_ago = (datetime.now() - post.date).days
+AttributeError: 'NoneType' object has no attribute 'date'
+[2024-01-07 00:44:21,013] ERROR in app: Exception on /post/12_slug [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 205, in post_route
+    days_ago = (datetime.now() - post.date).days
+AttributeError: 'NoneType' object has no attribute 'date'
+[2024-01-07 06:48:32,648] ERROR in app: Exception on /post/1_slug [GET]
+Traceback (most recent call last):
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home3/prathmes/virtualenv/stellarstories.mdakbari.live/StellarStories/3.8/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main.py", line 205, in post_route
+    days_ago = (datetime.now() - post.date).days
+AttributeError: 'NoneType' object has no attribute 'date'
