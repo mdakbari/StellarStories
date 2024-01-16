@@ -61,6 +61,7 @@ class Signup(db.Model):
 
     def check_password(self, password):
          return bcrypt.checkpw(password.encode('utf-8'), self.password)
+         
 
 @app.route("/")
 @app.route("/home")
@@ -140,7 +141,8 @@ def dashboard():
         if user and check_password_hash(user.password, upassword):
             session['user'] = uname
             posts = Posts.query.filter_by(username=user.uname).all()
-            return render_template('dashbord.html', posts=posts)
+            print(user.uname)
+            return render_template('dashbord.html', posts=posts, username=user.uname)
         else:
             flash('Invalid Username or Password', 'error')
             return render_template('login.html')
@@ -276,12 +278,18 @@ def contact():
             
     return render_template('contact.html')
     
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
+@app.route('/<path:path>')
+def catch_all(path):
+    return render_template('404.html'), 404
 @app.route("/post")
 def post():
     return render_template('post.html') 
 
 
 if __name__ == '__main__':
-    app.debug = True
+    # app.debug = True
     app.run()
