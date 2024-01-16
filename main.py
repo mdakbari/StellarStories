@@ -5,8 +5,6 @@ from datetime import datetime
 import json
 import os
 import bcrypt
-from werkzeug.security import generate_password_hash, check_password_hash
-
 
 with open('/home3/prathmes/stellarstories.mdakbari.live/StellarStories/config.json', 'r') as c:
 # with open('config.json', 'r') as c:
@@ -111,8 +109,8 @@ def signup():
         if Signup.query.filter_by(email=email).first():
             flash('Email already exists', 'error')
             return render_template('signup.html')
-        hasshed_password = generate_password_hash(password)
-        new_user = Signup(uname=uname,email=email,password=hasshed_password)    
+        # hasshed_password = generate_password_hash(password)
+        new_user = Signup(uname=uname,email=email,password=password)    
         # new_user.set_password(password)
         db.session.add(new_user)
         db.session.commit()
@@ -138,7 +136,7 @@ def dashboard():
         # password = Signup.query.filter_by(password=upassword).first()
 
     
-        if user and check_password_hash(user.password, upassword):
+        if user and upassword:
             session['user'] = uname
             posts = Posts.query.filter_by(username=user.uname).all()
             print(user.uname)
