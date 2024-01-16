@@ -111,7 +111,7 @@ def signup():
         if Signup.query.filter_by(email=email).first():
             flash('Email already exists', 'error')
             return render_template('signup.html')
-        hasshed_password = generate_password_hash(password, method='sha256')
+        hasshed_password = generate_password_hash(password)
         new_user = Signup(uname=uname,email=email,password=hasshed_password)    
         # new_user.set_password(password)
         db.session.add(new_user)
@@ -208,6 +208,7 @@ def edit(sno):
             return render_template("edit.html", params=params, post=post)
     return render_template('edit.html')
 
+
 #Delete
 @app.route("/delete/<string:sno>", methods=['GET','POST'])
 def delete(sno):
@@ -219,6 +220,7 @@ def delete(sno):
             db.session.commit()
         return redirect("/dashboard")
 
+
 # Show Post
 @app.route("/post/<string:post_slug>", methods=['GET'])
 def post_route(post_slug):
@@ -228,8 +230,8 @@ def post_route(post_slug):
   
     return render_template('post.html', params=params, post=post) 
 
-# show all post for user
 
+# show all post for user
 @app.route('/user/<string:username>/posts', methods=['GET'])
 def user_posts(username):
     user = Signup.query.filter_by(uname=username).first_or_404()
